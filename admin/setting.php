@@ -924,7 +924,7 @@ require_once('includes.php');
                                                         <form method="post" action="ajax_sidepanel.php?action=SaveSettings" id="#whatsapp_ordering">
                                                             <div class="form-group">
                                                                 <h4>WhatsApp Ordering</h4>
-                                                                <p class="help-block">Enter QuickOrder - WhatsApp Ordering Add-on purchase code below to enable the features. </p>
+                                                                <p class="help-block">Enter QuickOrder - WhatsApp Ordering Add-on purchase code below to enable the features. <br></p>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label>Purchase Code:</label>

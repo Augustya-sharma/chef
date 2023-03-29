@@ -9,29 +9,17 @@ if(checkloggedin())
     $main_imageName = get_restaurant_option($restaurant['id'],'qr_image');
 
     if(isset($_POST['submit'])){
-        if(isset($_FILES['qr_image'])) {
-            $valid_formats = array("jpeg", "jpg", "png");
-            $file = $_FILES['qr_image'];
-            $filename = $file['name'];
-            $ext = getExtension($filename);
-            $ext = strtolower($ext);
-            if (!empty($filename)) {
-                //File extension check
-                if (in_array($ext, $valid_formats)) {
-                    $main_path = ROOTPATH . "/storage/restaurant/logo/";
-                    $filename = uniqid(time()) . '.' . $ext;
-                    if (move_uploaded_file($file['tmp_name'], $main_path . $filename)) {
-                        $MainFileName = $filename;
-                        resizeImage(300, $main_path . $filename, $main_path . $filename);
-                        if ($main_imageName && file_exists($main_path . $main_imageName)) {
-                            unlink($main_path . $main_imageName);
-                        }
-                    } else {
-                        $errors[]['message'] = $lang['ERROR_MAIN_IMAGE'];
-                    }
-                } else {
-                    $errors[]['message'] = $lang['ONLY_JPG_ALLOW'];
+        if(!empty($_FILES['qr_image']['name'])) {
+            $target_dir = ROOTPATH . "/storage/restaurant/logo/";
+            $result = quick_file_upload('qr_image', $target_dir);
+            if ($result['success']) {
+                $MainFileName = $result['file_name'];
+                resizeImage(300, $target_dir . $MainFileName, $target_dir . $MainFileName);
+                if ($main_imageName && file_exists($target_dir . $main_imageName)) {
+                    unlink($target_dir . $main_imageName);
                 }
+            } else {
+                $errors[]['message'] = $result['error'];
             }
         }
 

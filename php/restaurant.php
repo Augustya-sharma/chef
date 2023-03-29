@@ -282,7 +282,7 @@ if (isset($_GET['slug']) || $_GET['id']) {
                                             <span class="menu_price">' . $menuPrice . '</span>
                                         </h4>
                                         <div class="menu_excerpt"><div>' . $menuDesc . '</div>' .
-                            ($allow_order
+                            (1
                                 ? '<div class="margin-left-auto padding-left-10"><button type="button" class="button add-item-button add-extras">' . $lang['ADD'] . '</button></div>'
                                 : '') .
                             '</div> '.$allergies_tpl .'
@@ -297,7 +297,7 @@ if (isset($_GET['slug']) || $_GET['id']) {
                                         <span class="menu_price">' . $menuPrice . '</span>
                                     </h4>
                                     <div class="menu_excerpt"><div>' . $menuDesc . '</div>' .
-                            ($allow_order
+                            (1
                                 ? '<div class="margin-left-auto padding-left-10"><button type="button" class="button add-item-button add-extras">' . $lang['ADD'] . '</button></div>'
                                 : '') .
                             '</div>'.$allergies_tpl .'
@@ -320,7 +320,7 @@ if (isset($_GET['slug']) || $_GET['id']) {
                                         <h4>' . $menuName . '</h4>
                                         <div class="menu-price">' . $menuPrice . '</div>
                                     </div>' .
-                            ($allow_order
+                            (1
                                 ? '<div class="add-menu">
                                         <div class="add-btn add-item-to-order">
                                             <span>' . $lang['ADD'] . '</span>

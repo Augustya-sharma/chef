@@ -167,6 +167,7 @@ jQuery(function ($) {
     }
     alertify.closeLogOnClick(true);
     alertify.delay(2000000);
+    alertify.maxLogItems(10);
 
     /* Manage waiter calls */
     function manage_waiter_calls(response)

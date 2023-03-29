@@ -686,8 +686,7 @@ INSERT INTO `<<prefix>>payments` (`payment_id`, `payment_install`, `payment_titl
 (11, '0', 'Midtrans', 'midtrans', NULL),
 (12, '0', 'PayTabs', 'paytabs', NULL),
 (13, '0', 'Telr', 'telr', NULL),
-(14, '0', 'Razorpay', 'razorpay', NULL),
-(15, '0', 'Flutterwave', 'flutterwave', NULL);
+(14, '0', 'Razorpay', 'razorpay', NULL);
 
 TRUNCATE TABLE `<<prefix>>restaurant`;
 

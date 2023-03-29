@@ -3294,6 +3294,7 @@ body.rtl .user-lang-switcher .dropdown-menu {
 
 /* Lightbox */
 .menu-lightbox-image { cursor: pointer; }
+.lg-outer {direction: ltr;}
 .lg-backdrop {
     background: rgba(30,34,40,.8);
 }

@@ -557,6 +557,7 @@ function addUser(){
             $insert_user->description = $_POST['sex'];
             $insert_user->country = $_POST['country'];
             $insert_user->image = $image_name;
+            $insert_user->confirm = get_random_id();
             $insert_user->created_at = $now;
             $insert_user->updated_at = $now;
             $insert_user->save();

@@ -49,7 +49,6 @@ if ($getVersions != '')
             $found = true;
 
             if ( !is_file(  $update_dir.'QUICKQR-CMS-'.$aV.'.zip' )) {
-
                 if ( !is_dir( $update_dir ) ) mkdir ( $update_dir );
                 ?>
                 <form id="upload" method="post" action="upload.php" enctype="multipart/form-data">
@@ -61,7 +60,6 @@ if ($getVersions != '')
                     <ul>
                         <!-- The file uploads will be shown here -->
                     </ul>
-
                 </form>
                 <?php
                 break;

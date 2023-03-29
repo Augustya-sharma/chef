@@ -105,6 +105,7 @@ if($match) {
     require_once ROOTPATH . '/includes/classes/class.country.php';
     require_once ROOTPATH . '/includes/functions/func.global.php';
     require_once ROOTPATH . '/includes/lib/password.php';
+    require_once ROOTPATH . '/includes/lib/class.upload.php-master/src/class.upload.php';
     require_once ROOTPATH . '/includes/functions/func.users.php';
     require_once ROOTPATH . '/includes/functions/func.sqlquery.php';
     require_once ROOTPATH . '/includes/classes/GoogleTranslate.php';

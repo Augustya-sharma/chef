@@ -9,6 +9,7 @@ if (isset($_SESSION['quickad'][$access_token]['payment_type'])) {
 
     $reference = $_POST['paystackReference'];
 
+
     $payment_type = $_SESSION['quickad'][$access_token]['payment_type'];
     if($payment_type == "order") {
         $restaurant_id = $_SESSION['quickad'][$access_token]['restaurant_id'];
